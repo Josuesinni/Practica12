@@ -47,13 +47,13 @@ class LoginActivity : AppCompatActivity() {
         error.visibility = if(visible) View.VISIBLE else View.INVISIBLE
     }
 
-    public override fun onStart() {
+    /*public override fun onStart() {
         super.onStart()
         val currentUser=auth.currentUser
         if (currentUser!=null){
             goToMain(currentUser)
         }
-    }
+    }*/
     fun login(email:String,password:String){
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this){
             task->
